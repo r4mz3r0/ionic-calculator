@@ -1,14 +1,28 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Calculator
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+  <ion-item>
+    <ion-label class="value">
+      {{valueToPrint}}
+    </ion-label>
+  </ion-item>
+
+  <ion-button class="all-buttons equal-size" *ngFor="let spec of special" (click)="onButtonPress(spec)">{{spec}}</ion-button>
+  <ion-button class="all-buttons equal-size" *ngIf="!buttonActive[0]" (click)="onButtonPress(signs[0])">{{signs[0]}}</ion-button>
+  <ion-button class="all-buttons equal-size" color="secondary" *ngIf="buttonActive[0]" (click)="onButtonPress(signs[0])">{{signs[0]}}</ion-button>
+  <div *ngFor="let numGrp of numberGroups; let i = index">
+    <ng-container *ngFor="let num of numGrp">
+      <ion-button class="all-buttons equal-size" (click)="onButtonPress(num)" *ngIf="num != '0'">{{num}}</ion-button>
+      <ion-button class="all-buttons zero-button" (click)="onButtonPress(num)" *ngIf="num == '0'">{{num}}</ion-button>
+    </ng-container>
+    <ion-button class="all-buttons equal-size" color="secondary" *ngIf="buttonActive[i+1]" (click)="onButtonPress(signs[i+1])">{{signs[i+1]}}</ion-button>
+    <ion-button class="all-buttons equal-size" *ngIf="!buttonActive[i+1]" (click)="onButtonPress(signs[i+1])">{{signs[i+1]}}</ion-button>
+</div>
+
 </ion-content>
