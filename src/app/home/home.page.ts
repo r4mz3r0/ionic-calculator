@@ -22,7 +22,8 @@ export class HomePage {
   signs = ['/','x','-','+','='];
   numberGroups = [['7','8','9'],['4','5','6'],['1','2','3'],['0', '.']];
   externalCommands = ['History', 'Backspace'];
-  buttonActive = [false,false,false,false,false]
+  buttonActive = [false,false,false,false,false];
+  history = [];
 
   onButtonPress(num) {
     var i;
@@ -32,31 +33,31 @@ export class HomePage {
     var char;
     // check all other characters
     if(num == 'AC') {
-      this.value = 0;
-      this.operation = '';
-      this.decimal = false;
-      this.firstOp = 0;
-      this.secOp = 0;
-      this.decimalNum = 0;
-      this.decimalNumFirst = 0;
-      this.decimalNumSec = 0;
-      this.first = true;
+      this.reset();
     } else if(num == '+/-' && this.valueToPrint != '0') {
       this.value = this.value * -1;
     } else if (num == '%') {
       this.value = this.value/100;
     } else if (num == '.' && !this.decimal) {
+      if(this.typedOp || this.equal) {
+        // this.value = 0;
+        this.valueToPrint = 0;
+        console.log("changed");
+        this.first = !this.first;
+        this.reset();
+      }
       this.valueToPrint = this.valueToPrint + '.';
       this.decimal = true;
       return;
     } else if (num == '/' || num == 'x' || num == '-' || num == '+') {
       //operations
-      if(this.equal) {
+      if(this.typedOp || this.equal) {
         this.first = !this.first;
       }
       this.handleOp(num);
     } else if(num == '=') {
       this.solve(num);
+      // this.history.push(this.valueToPrint);
       return;
     } else {
       // else it is a number
@@ -85,13 +86,13 @@ export class HomePage {
       }
       this.typedOp = false;
     }
-    // console.log("value: " + this.value);
-    // console.log("operation: " + this.operation);
-    // console.log("typeOp: " + this.typedOp);
-    // console.log("firstOp: " + this.firstOp);
-    // console.log("secOp: " + this.secOp);
-    // console.log("buttonActive: " + this.buttonActive);
-    // console.log("-------------");
+    console.log("value: " + this.value);
+    console.log("operation: " + this.operation);
+    console.log("typeOp: " + this.typedOp);
+    console.log("firstOp: " + this.firstOp);
+    console.log("secOp: " + this.secOp);
+    console.log("buttonActive: " + this.buttonActive);
+    console.log("-------------");
     this.equal = false;
     this.valueToPrint =  '' + this.value;
     // if(this.decimal) {
@@ -136,12 +137,27 @@ export class HomePage {
       this.value = this.firstOp * this.secOp;
       break;
     }
-    var deci = this.decimalNumFirst>this.decimalNumSec ? this.decimalNumFirst : this.decimalNumSec;
-    this.value = parseFloat(this.value).toFixed(deci);
+    // 5.23-6.33
+    if(this.decimal) {
+      var deci = this.decimalNumFirst>this.decimalNumSec ? this.decimalNumFirst : this.decimalNumSec;
+      this.value = parseFloat(this.value).toFixed(deci);
+    }
     this.valueToPrint = '' + this.value;
     this.firstOp = this.value;
     // this.first = !this.first;
     // this.operation = '';
     this.equal = true;
+  }
+
+  reset() {
+    this.value = 0;
+    this.operation = '';
+    this.decimal = false;
+    this.firstOp = 0;
+    this.secOp = 0;
+    this.decimalNum = 0;
+    this.decimalNumFirst = 0;
+    this.decimalNumSec = 0;
+    this.first = true;
   }
 }

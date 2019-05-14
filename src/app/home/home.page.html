@@ -23,6 +23,10 @@
     </ng-container>
     <ion-button class="all-buttons equal-size" color="secondary" *ngIf="buttonActive[i+1]" (click)="onButtonPress(signs[i+1])">{{signs[i+1]}}</ion-button>
     <ion-button class="all-buttons equal-size" *ngIf="!buttonActive[i+1]" (click)="onButtonPress(signs[i+1])">{{signs[i+1]}}</ion-button>
-</div>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let item of history">{{item}}</ion-item>
+  </ion-list>
 
 </ion-content>
