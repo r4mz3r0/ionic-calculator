@@ -1,6 +1,8 @@
 {
   "name": "calculator",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "d20ebf4c"
 }

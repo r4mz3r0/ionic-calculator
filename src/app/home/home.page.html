@@ -25,8 +25,24 @@
     <ion-button class="all-buttons equal-size" *ngIf="!buttonActive[i+1]" (click)="onButtonPress(signs[i+1])">{{signs[i+1]}}</ion-button>
   </div>
 
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+      <div>
+        <h1><strong><u>History</u></strong></h1>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="about">
+        <ion-button color="tertiary tint" href="/about">About the Creator/App</ion-button>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <!-- <ion-button color="tertiary-tint" href="/about">About the Creator/App</ion-button> -->
+  <!-- <h1><strong><u>History</u></strong></h1> -->
   <ion-list>
-    <ion-item *ngFor="let item of history">{{item}}</ion-item>
+    <ion-item *ngFor="let item of history; let i = index">{{history[history.length-i-1]}}</ion-item>
   </ion-list>
 
 </ion-content>
