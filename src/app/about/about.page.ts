@@ -51,7 +51,7 @@ import { trigger, style, animate, transition, group, query, animateChild } from 
 
   ]
 })
-export class AboutPage implements OnInit {
+export class AboutPage {
 
   displayAchievement = false;
 
