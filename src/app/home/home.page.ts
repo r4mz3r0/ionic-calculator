@@ -119,7 +119,7 @@ export class HomePage {
       }
       char = +num;
       var deci;
-      var boolDeci;
+      var boolDeci = false;
       if(this.first) {
         deci = this.decimalNumFirst;
         boolDeci = this.decimalFirst;
@@ -129,8 +129,8 @@ export class HomePage {
       }
       if(boolDeci) {
         deci++;
-        this.value = parseFloat(this.value) + (char/(10**deci));
-        this.value = parseFloat(this.value).toFixed(deci);
+        this.value = parseFloat(''+this.value) + (char/(10**deci));
+        this.value = parseFloat(parseFloat(''+this.value).toFixed(deci));
       } else {
         this.value = (this.value*10) + char;
       }
@@ -196,8 +196,8 @@ export class HomePage {
   solve(op) {
     // console.log("before firstOp: " + this.firstOp);
     // console.log("before secOp: " + this.secOp);
-    this.secOp = parseFloat(this.secOp);
-    this.firstOp = parseFloat(this.firstOp);
+    this.secOp = parseFloat(''+this.secOp);
+    this.firstOp = parseFloat(''+this.firstOp);
     switch(this.operation) {
       case '+':
       this.value = this.firstOp + this.secOp;
@@ -216,7 +216,7 @@ export class HomePage {
     // 5.23-6.33
     if(this.decimalFirst || this.decimalSec) {
       var deci = this.decimalNumFirst>this.decimalNumSec ? this.decimalNumFirst : this.decimalNumSec;
-      this.value = parseFloat(this.value).toFixed(deci);
+      this.value = parseFloat(parseFloat(''+this.value).toFixed(deci));
     }
     this.valueToPrint = '' + this.value;
     this.firstOp = this.value;
@@ -236,7 +236,6 @@ export class HomePage {
     this.operation = '';
     this.firstOp = 0;
     this.secOp = 0;
-    this.decimalNum = 0;
     this.decimalNumFirst = 0;
     this.decimalNumSec = 0;
     this.decimalFirst = false;
