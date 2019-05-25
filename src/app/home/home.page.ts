@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HistoryService } from './../services/history.service';
 
 @Component({
   selector: 'app-home',
@@ -25,6 +26,21 @@ export class HomePage {
   externalCommands = ['History', 'Backspace'];
   buttonActive = [false,false,false,false,false];
   history = [];
+
+  constructor(public historyStorage : HistoryService) {
+  }
+
+  // fullHistoryButton() {
+  //   this.historyStorage.clearAll();
+  // }
+
+  addHistoryEvent(num) {
+    var number = num + '';
+    var message = "";
+    var tempArr = [number, message];
+    var tempDate = new Date() + "!" + new Date().getMilliseconds();
+    this.historyStorage.addHistory(tempDate,tempArr);
+  }
 
   onButtonPress(num) {
     // console.log("INPUT: " + num)
@@ -110,6 +126,7 @@ export class HomePage {
     } else if(num == '=') {
       this.solve(num);
       this.history.push(this.valueToPrint);
+      this.addHistoryEvent(this.valueToPrint);
       // console.log("history: " + this.history);
       return;
     } else {
