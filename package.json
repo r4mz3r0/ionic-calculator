@@ -1,6 +1,6 @@
 {
   "name": "calculator",
-  "version": "0.0.2",
+  "version": "2.0",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
@@ -69,9 +69,13 @@
     "tslint": "~5.16.0",
     "typescript": "~3.1.6"
   },
-  "description": "A historic Calculator",
+  "description": "A Historic Calculator",
   "cordova": {
     "plugins": {
+      "cordova-plugin-health": {
+        "HEALTH_READ_PERMISSION": "App needs read access",
+        "HEALTH_WRITE_PERMISSION": "App needs write access"
+      },
       "cordova-sqlite-storage": {},
       "uk.co.workingedge.cordova.plugin.sqliteporter": {},
       "cordova-plugin-whitelist": {},

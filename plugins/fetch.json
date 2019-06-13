@@ -64,5 +64,16 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-health": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-health"
+    },
+    "is_top_level": true,
+    "variables": {
+      "HEALTH_READ_PERMISSION": "App needs read access",
+      "HEALTH_WRITE_PERMISSION": "App needs write access"
+    }
   }
 }

@@ -1,5 +1,5 @@
-<?xml version='2.0' encoding='utf-8'?>
-<widget id="com.apro.calculator" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.apro.calculator" version="2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Calculator</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="armaani15@yahoo.com" href="https://github.com/Apro123">Github</author>
@@ -23,6 +23,8 @@
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <preference name="AndroidPersistentFileLocation" value="Internal" />
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
