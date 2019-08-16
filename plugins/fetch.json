@@ -2,6 +2,7 @@
   "cordova-sqlite-storage": {
     "source": {
       "type": "registry",
+<<<<<<< HEAD
       "id": "cordova-sqlite-storage@^3.2.1"
     },
     "is_top_level": true,
@@ -11,6 +12,9 @@
     "source": {
       "type": "registry",
       "id": "cordova-plugin-splashscreen@5.0.2"
+=======
+      "id": "cordova-sqlite-storage@3.2.0"
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
     },
     "is_top_level": true,
     "variables": {}
@@ -23,6 +27,7 @@
     "is_top_level": true,
     "variables": {}
   },
+<<<<<<< HEAD
   "cordova-plugin-admob-free": {
     "source": {
       "type": "registry",
@@ -41,6 +46,8 @@
     "is_top_level": false,
     "variables": {}
   },
+=======
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
   "cordova-plugin-whitelist": {
     "source": {
       "type": "registry",
@@ -65,6 +72,17 @@
     "is_top_level": true,
     "variables": {}
   },
+<<<<<<< HEAD
+=======
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@5.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
   "cordova-plugin-ionic-webview": {
     "source": {
       "type": "registry",
@@ -83,6 +101,7 @@
     "is_top_level": true,
     "variables": {}
   },
+<<<<<<< HEAD
   "cordova-admob-sdk": {
     "source": {
       "type": "registry",
@@ -106,5 +125,17 @@
     },
     "is_top_level": true,
     "variables": {}
+=======
+  "cordova-plugin-health": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-health"
+    },
+    "is_top_level": true,
+    "variables": {
+      "HEALTH_READ_PERMISSION": "App needs read access",
+      "HEALTH_WRITE_PERMISSION": "App needs write access"
+    }
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
   }
 }

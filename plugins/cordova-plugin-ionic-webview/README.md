@@ -107,6 +107,7 @@ Values like `http`, `https` or `file` are not valid and will use default value i
 
 If you change it, you'll need to add a new `allow-navigation` entry in the `config.xml` for the configured scheme (i.e `<allow-navigation href="httpsionic://*"/>` if `iosScheme` is set to `httpsionic`).
 
+<<<<<<< HEAD
 #### WKSuspendInBackground
 
  ```xml
@@ -117,6 +118,8 @@ Default value is `true` (suspend).
 
 Set to false to stop WKWebView suspending in background too eagerly.
 
+=======
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
 #### KeyboardAppearanceDark
 
 ```xml
@@ -148,8 +151,11 @@ Whether to use a dark styled keyboard on iOS
 
     * The default origin for requests from the iOS WebView is `ionic://localhost`. If `Hostname` and `iosScheme` preferences are set, then origin will be `iosSchemeValue://HostnameValue`.
 
+<<<<<<< HEAD
 1. The WebView is not able to display images, videos or other files from file or content protocols or if it doesn't have protocol at all. For those cases use `window.Ionic.WebView.convertFileSrc()` to get the proper url.
 
+=======
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
 1. Replace any usages of `window.Ionic.normalizeURL()` with `window.Ionic.WebView.convertFileSrc()`.
 
     * For Ionic Angular projects, there is an [Ionic Native wrapper](https://beta.ionicframework.com/docs/native/ionic-webview):

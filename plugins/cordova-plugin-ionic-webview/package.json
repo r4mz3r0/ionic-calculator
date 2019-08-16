@@ -1,8 +1,14 @@
 {
   "_from": "cordova-plugin-ionic-webview@^4.0.0",
+<<<<<<< HEAD
   "_id": "cordova-plugin-ionic-webview@4.1.1",
   "_inBundle": false,
   "_integrity": "sha512-y8drBhMdkHKUr0zu+UGkFGsDrkCsxjbCd3RzzlyDxcEzdHWvasRM5gyDiKBHkziT2iHYzEAjXwkT1ZXKU3OY9Q==",
+=======
+  "_id": "cordova-plugin-ionic-webview@4.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-rJf7jFQNw7l0U4Y7P6DjxwmO/qQgS7xqiTgwDbNFS4z4+FZ3EZyupll7/cFEDnxGRNMgWsMKDhIABUo5mIDaUQ==",
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
   "_location": "/cordova-plugin-ionic-webview",
   "_phantomChildren": {},
   "_requested": {
@@ -16,11 +22,19 @@
     "fetchSpec": "^4.0.0"
   },
   "_requiredBy": [
+<<<<<<< HEAD
     "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-4.1.1.tgz",
   "_shasum": "7bdfbfaa498f6bd0f92db4cb51ce0c486ac07233",
+=======
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-4.0.1.tgz",
+  "_shasum": "2ff5e73998d87316d3ab8dbe4b6ccf768ab7f637",
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
   "_spec": "cordova-plugin-ionic-webview@^4.0.0",
   "_where": "/mnt/c/Users/armaa/Desktop/coding/ionic/calculator",
   "author": {
@@ -103,5 +117,9 @@
     "sync_plugin_xml": "sync-cordova-xml package.json plugin.xml --output=plugin.xml",
     "version": "npm run sync_plugin_xml && git add plugin.xml"
   },
+<<<<<<< HEAD
   "version": "4.1.1"
+=======
+  "version": "4.0.1"
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
 }

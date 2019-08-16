@@ -177,6 +177,7 @@ NSTimer *timer;
         return configuration;
     }
 
+<<<<<<< HEAD
     if(![settings cordovaBoolSettingForKey:@"WKSuspendInBackground" defaultValue:YES]){
         NSString* _BGStatus;
         if (@available(iOS 12.2, *)) {
@@ -196,6 +197,8 @@ NSTimer *timer;
                          forKey:_BGStatus];
     }
 
+=======
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
     configuration.allowsInlineMediaPlayback = [settings cordovaBoolSettingForKey:@"AllowInlineMediaPlayback" defaultValue:YES];
     configuration.suppressesIncrementalRendering = [settings cordovaBoolSettingForKey:@"SuppressesIncrementalRendering" defaultValue:NO];
     configuration.allowsAirPlayForMediaPlayback = [settings cordovaBoolSettingForKey:@"MediaPlaybackAllowsAirPlay" defaultValue:YES];
@@ -692,11 +695,14 @@ NSTimer *timer;
         NSLog(@"%@", [errorUrl absoluteString]);
         [theWebView loadRequest:[NSURLRequest requestWithURL:errorUrl]];
     }
+<<<<<<< HEAD
 #ifdef DEBUG
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"] message:message preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:nil]];
     [vc presentViewController:alertController animated:YES completion:nil];
 #endif
+=======
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
 }
 
 - (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView

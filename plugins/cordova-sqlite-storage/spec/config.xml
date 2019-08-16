@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
+<<<<<<< HEAD
 <widget id="com.phonegap.plugins.sqlite.tests" version="0.0.1"
+=======
+<widget id="com.phonegap.plugins.sqlite.tests" version="0.0.2"
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
         xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>cordova-sqlite-spec</name>
     <description>

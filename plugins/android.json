@@ -7,6 +7,7 @@
     "files": {}
   },
   "installed_plugins": {
+<<<<<<< HEAD
     "cordova-plugin-admob-free": {
       "ADMOB_APP_ID": "ca-app-pub-2583838894003224~1864914770",
       "PACKAGE_NAME": "com.apro.calculator"
@@ -18,6 +19,13 @@
       "PACKAGE_NAME": "com.apro.calculator"
     },
     "cordova-plugin-device": {
+=======
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.apro.calculator"
+    },
+    "cordova-plugin-health": {
+      "GMS_VERSION": "16.0.1",
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
       "PACKAGE_NAME": "com.apro.calculator"
     },
     "cordova-plugin-ionic-keyboard": {
@@ -43,6 +51,7 @@
       "PACKAGE_NAME": "com.apro.calculator"
     }
   },
+<<<<<<< HEAD
   "dependent_plugins": {
     "cordova-admob-sdk": {
       "PLAY_SERVICES_VERSION": "11.0.4",
@@ -53,3 +62,7 @@
     }
   }
 }
+=======
+  "dependent_plugins": {}
+}
+>>>>>>> 5f179ee7ab8b75fc488dcee8f47efe3369151345
