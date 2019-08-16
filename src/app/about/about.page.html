@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title>About the Author of this App!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="about-pic">
+          <img max-width="auto" min-height="128px" src="../assets/img/head.jpeg"/>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <p style="font-size:100%; text-align: center"><u><strong>Check me out at: </strong></u></p>
+          <!-- TODO: add ion icon for each item -->
+          <ion-item lines="none" href="https://www.linkedin.com/in/armaan-kapoor-a7ab24143/" target="_blank">
+            <ion-icon slot="start" color="medium" name="logo-linkedin"></ion-icon>
+            <p>Linkedin</p>
+          </ion-item>
+          <ion-item lines="none" href="https://www.github.com/apro123" target="_blank">
+            <ion-icon slot="start" color="medium" name="logo-github"></ion-icon>
+            <p>Github</p>
+          </ion-item>
+          <ion-item lines="none" href="mailto:armaani15@yahoo.com?subject=feedback">
+            <ion-icon slot="start" color="medium" name="mail"></ion-icon>
+            <p>Email me</p>
+          </ion-item>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none"  class="finish">
+
+          <div href="/">
+            <ion-button (click)="animation()" *ngIf="!displayAchievement" color="red" fill="outline">Get Thanked!</ion-button>
+            <!-- <ion-button (click)="animation()" *ngIf="!displayAchievement" color="red" fill="outline">Finish</ion-button> -->
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item lines="none"  class="finish">
+    <div *ngIf="displayAchievement" @container>
+      <div class="medal" @badge>
+          <img src="assets/img/thumbs-up.jpeg" />
+      </div>
+      <div class="message" @message>
+        <h5>Big Chungus thanks you!</h5>
+      </div>
+    </div>
+  </ion-item>
+
+  <br><br>
+  <div class="about">
+    <p>Hello, my name is Armaan Kapoor. I would like to first thank you for downloading my wonderful app.
+    I am a app developer who is looking for opportunities. Please email me for any app requests.</p>
+    <br>
+    <p><u>My experience</u>
+      <ul>
+        <li>Ionic 4</li>
+        <li>App developement</li>
+        <li>Website developement</li>
+        <li>And <a href="https://www.linkedin.com/in/armaan-kapoor-a7ab24143/" target="_blank">more</a></li>
+      </ul>
+    <!-- </p> -->
+    <br>
+    <p><u>Future Expansion:</u> I hope to hopefully create a calender in which you will be able to see all the calculations you have done for each day, month, year!
+    If you guys have any suggestions, please let me know.</p>
+    <br>
+    <p><strong>Note:</strong> I know there might be some bug fixes, but I assure you that I am working nonstop (Sorry about that! :/ ).
+    I would appreciate any type of feedback! Please rate this app 5 stars and tell your friends</p>
+    <br>
+
+    <ion-button round outline color="light" href="/home">Back to Calculator</ion-button>
+
+  </div>
+
+
+</ion-content>

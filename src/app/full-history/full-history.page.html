@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Full History</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-button (click)="clearAll();">Clear All</ion-button>
+<!-- <ion-button (click)="printData();">data</ion-button>
+<ion-button (click)="traverseHistory();">traverse</ion-button> -->
+<ion-button color="secondary" href="/">Back To Calculator</ion-button>
+<div *ngFor="let history of keys; let i = index">
+  <ion-card *ngIf="data[history] != NULL">
+    <ion-card-header>
+      <ion-card-title>Calculation #{{i+1}}
+        <ion-icon name="trash" (click)="removeHistoryEvent(history);"></ion-icon>
+        <ion-icon name="create" (click)="editInit(history)"></ion-icon>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Date: </strong>{{keysToPrint[i]}}</p>
+      <p><strong>Value: </strong>{{data[history][0]}}</p>
+      <p *ngIf="!edit[i]"><strong>Notes: </strong>{{data[history][1]}}</p>
+      <div *ngIf="edit[i]">
+        <p><strong>Notes: </strong>
+          <ion-input type="text" text-right [(ngModel)]="inputMessage" placeholder="Enter Notes"></ion-input>
+        </p>
+        <ion-button (click)="editHistoryMessage(history);">Save</ion-button>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+</div>
+
+</ion-content>
